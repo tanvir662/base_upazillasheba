@@ -1,0 +1,281 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+<head>
+{% load static from staticfiles %}
+	<meta charset="utf-8">
+		<link rel="shortcut icon" href="{% static 'images/govt-logo.png' %}" type="image/x-icon">
+	<title>উপজেলা সেবা সার্ভিস</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/opensans-font.css' %}">
+	<link rel="stylesheet" type="text/css" href="{%static 'fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+</head>
+<body>	 
+	<div class="page-content">
+		<div class="form-v1-content">
+			<div class="wizard-form">
+				<form class="form-register" action="{% url 'gereralpeople_from' %}" method="post">
+		        	{% csrf_token %}
+		        	<div id="form-total">
+					
+					<!-- SECTION 2 -->
+			            <h2>
+							<p class="step-icon"><span>১</span></p>
+			            	<span class="step-text">সেবার ধরন নির্বাচন করুন</span>
+			            </h2>
+	                <section>
+							<div class="heder-contain">
+
+								<img style="height: 100px; weight:100px vertical-align: middle;border-radius: 50%;" src="{% static 'images/govt-logo.png'  %}" align="left" alt="Avatar">
+
+								<center>
+								<div class="Name-Text">
+
+								<h3>উপজেলা সেবা-Upozila Seba</h3>
+								<h1>কেরানীগঞ্জ উপজেলা প্রশাসন, ঢাকা  </h1>
+
+								</div>
+								</center>
+
+						    </div>
+
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">অপরাধের ধরন নির্বাচন করুন</h3>
+									<h5>তথ্য দিন সেবা নিন । তথ্যদাতার পরিচয় সম্পূর্ণরূপে গোপন রাখা হবে। </h5>
+								</div>
+								<div class="form-row-total">
+									<div class="form-row">
+				                		<div class="form-holder form-holder-2 form-holder-3">
+				                			<input type="radio" class="radio" name="bank-1" id="bank-1" value="bank-1" checked>
+				                			<label class="bank-images label-above bank-1-label" for="bank-1">
+				                				<img src="{% static 'images/1.jpg' %}" alt="bank-1">
+				                			</label>
+											<input type="radio" class="radio" name="bank-2" id="bank-2" value="bank-2">
+											<label class="bank-images label-above bank-2-label" for="bank-2">
+												<img src="{% static 'images/2.jpg'  %}" alt="bank-2">
+											</label>
+											<input type="radio" class="radio" name="bank-3" id="bank-3" value="bank-3">
+											<label class="bank-images label-above bank-3-label" for="bank-3">
+												<img src="{% static 'images/3.jpg'  %}" alt="bank-3">
+											</label>
+				                		</div>
+				                	</div>
+				                	<div class="form-row">
+				                		<div class="form-holder form-holder-2 form-holder-3">
+				                			<input type="radio" class="radio" name="bank-4" id="bank-4" value="bank-4">
+				                			<label class="bank-images bank-4-label" for="bank-4">
+				                				<img src="{% static 'images/4.jpg' %}" alt="bank-4">
+				                			</label>
+											<input type="radio" class="radio" name="bank-5" id="bank-5" value="bank-5">
+											<label class="bank-images bank-5-label" for="bank-5">
+												<img src="{% static 'images/5.jpg'  %}" alt="bank-5">
+											</label>
+											<input type="radio" class="radio" name="bank-6" id="bank-6" value="bank-6">
+											<label class="bank-images bank-6-label" for="bank-6">
+												<img src="{% static 'images/6.jpg'  %}" alt="bank-6">
+											</label>
+				                		</div>
+				                	</div>
+								</div>
+							</div>
+			        </section>
+
+			        
+		        		<!-- SECTION 1 -->
+			            <h2>
+							<p class="step-icon"><span>২</span></p>
+			            	<span class="step-text">যোগাযোগের ঠিকানা</span>
+			            </h2>
+					<section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">ঘটনাস্থলের  ঠিকানা  নির্বাচন করুন</h3>
+									<p>সঠিক তথ্য দিয়ে সেবা পেতে সহযোগিতা করুন</p>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										 <!-- <label class="special-label">জেলা ও উপজেলা নির্বাচন করুন</label> -->
+										<select name="catagory" >
+											<option value="ক্যাটাগরি" disabled selected>ক্যাটাগরি </option>
+											<option value="বাল্য বিবাহ ">বাল্য বিবাহ </option>
+											<option value="মাদক সংক্রান্ত">মাদক সংক্রান্ত</option>
+											<option value="আইন শৃঙ্খলা">আইন শৃঙ্খলা</option>
+											<option value="নারী নিৰ্যাতন">নারী নিৰ্যাতন </option>
+											<option value="খাদ্য ভেজাল">খাদ্য ভেজাল </option>
+											<option value="অন্যান্য">অন্যান্য</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<select name="district" >
+											<option value="জেলা" disabled selected>জেলা </option>
+											<option value="ঢাকা">ঢাকা</option>
+										</select>
+									</div>
+								</div> 
+								
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<select name="upozilla" >
+											<option value="উপজেলা" disabled selected>উপজেলা </option>
+											<option value="কেরানীগঞ্জ">কেরানীগঞ্জ</option>
+										</select>
+									</div>
+								</div> 
+								
+								
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<select name="union" >
+											<option value="ইউনিয়ন" disabled selected> ইউনিয়ন</option>
+											<option value="হযরতপুর">হযরতপুর </option>
+											<option value="কলাতিয়া">কলাতিয়া </option>
+											<option value="তারানগর">তারানগর </option>
+											<option value="শাক্তা">শাক্তা </option>
+											<option value="রোহিতপুর">রোহিতপুর </option>
+											<option value="বাস্তা">বাস্তা </option>
+											<option value="কালিন্দী">কালিন্দী </option>
+											<option value="জিনজিরা">জিনজিরা </option>
+											<option value="শুভাঢ্যা">শুভাঢ্যা </option>
+											<option value="তেঘরিয়া">তেঘরিয়া </option>
+											<option value="কোন্ডা">কোন্ডা </option>
+											<option value="আগানগর">আগানগর</option>
+										</select>
+									</div>
+								</div> 
+								
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>গ্রাম / রাস্তার নাম</legend>
+											<input type="text" name="village"  class="form-control" placeholder="এখানে লিখুন" required>
+										</fieldset>
+									</div>
+								</div>
+
+								<div >
+									<p>অভিযোগ দেয়ার ধরন</p>
+									লিখিত <br>
+								</div>
+								
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>অভিযোগ এখানে বিস্তারিত লিখুন</legend>
+											<textarea type="text" name="complain"  class="form-control" rows="20" cols="50" placeholder="" > </textarea>
+										</fieldset>
+									</div>
+								</div>
+								<div >
+									 ভয়েজ রেকডিং<br> <br>
+									<input type="file" name="file" />
+								</div>
+    
+							</div>
+			         </section>
+						<!-- SECTION 2 -->
+			            <h2>
+							<p class="step-icon"><span>৩</span></p>
+			            	<span class="step-text">তথ্যদাতা</span>
+			            </h2>
+			         <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">তথ্যদাতার তথ্য</h3>
+									<p>ভবিষ্যতে সহযোগিতার জন্য আপনার সাথে যদি যোগাযোগ করার প্রয়োজন হয় তা সে জন্য আপনার তথ্য নিচ্ছি। মনে রাখবেন আপনি আমাদের তথ্য দিয়ে সহযোগিতা করেছেন।  সুতরাং আমরা সম্পূর্ণরূপে  আপনার পরিচয় গোপন রাখবো। </p>
+								</div>
+								
+								
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>নাম</legend>
+											<input type="text" name="name"  class="form-control" placeholder="এখানে আপনার নাম লিখুন " required>
+										</fieldset>
+									</div>
+								</div>
+								
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>মোবালই নাম্বার </legend>
+											<input type="text" name="phone"  class="form-control" placeholder="01*********" required>
+										</fieldset>
+									</div>
+								</div> 
+							</div>
+			         </section>
+						
+			            <!-- SECTION 3 -->
+			            <h2>
+							<p class="step-icon"><span>৪</span> </p>
+			            	<span class="step-text">ভেরিফিকেশন </span>
+			            </h2>
+			         <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">ভেরিফিকেশন </h3>
+									<p>আপনার ফোনে এসএমএস এর মাধ্যমে ৪ সংখ্যার একটি  OTP কোড পাঠানো হয়েছে। অনুগ্রহপূর্বক তা এখানে লিখুন।</p>
+								</div>
+								    <div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>OTP কোড</legend>
+											<input type="text" name="your_otp" id="your_otp" class="form-control" placeholder="****" >
+
+										</fieldset><br><br>
+
+											<center>
+											<input type="submit" value="submit" style="background-color: #4CAF50;
+												    		border: none; color: white;
+												     		padding: 12px 10px;
+												     	 text-align: center;
+												       text-decoration: none;
+												        display: inline-block;
+												         font-size: 16px;
+												          border-radius:13px;">
+										</center>
+										<div class="container">
+
+
+							</div>
+							</div>
+			          </section>
+
+
+					</div>
+
+	</form>
+			</div>
+			</div>
+		</div>
+
+</body>
+	<script type="text/javascript">
+	<!-- To Enable and disable input field -->
+			function getEnable(){
+				if(document.getElementById("agree").checked){
+				
+					document.getElementById("disabled").disabled = false;
+				}else{
+					document.getElementById("disabled").disabled = true;
+				}
+			}	
+	
+	
+	</script>
+	
+	<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'js/jquery.steps.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+	<script src="{% static 'js/jquery.min.js' %}"></script>
+	
+</html>
